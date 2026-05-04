@@ -34,6 +34,7 @@
             padding: 100px 20px 80px;
             text-align: center;
             color: var(--white);
+            background: var(--rutgers-navy); /* Solid fallback */
             background-size: cover;
             background-position: center;
             border-bottom: 5px solid var(--accent-blue);
@@ -128,12 +129,22 @@
             height: auto;
         }
 
+        .tracker-info {
+            background: rgba(112, 176, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
         .tracker-form {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
             margin: 25px 0;
-            background: rgba(112, 176, 255, 0.08);
+            background: rgba(112, 176, 255, 0.05);
             padding: 20px;
             border-radius: 20px;
             border: 2px dashed var(--primary-blue);
@@ -297,13 +308,22 @@
             <img src="chibi-businessman.jpg" alt="Chibi Businessman" class="chibi-icon">
             <h2 style="text-align: center; border: none; padding: 0;">Internship Search Quest</h2>
             
+            <div class="tracker-info">
+                <p style="margin-top: 0;"><strong>Welcome to the Tracker!</strong> Use this tool to organize your career journey. This "Quest Log" allows you to:</p>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Record Applications:</strong> Keep a central list of every company you've applied to.</li>
+                    <li><strong>Timestamp Entries:</strong> Note exactly when you submitted your resume to stay on top of follow-ups.</li>
+                    <li><strong>Manage Status:</strong> Real-time updates let you change a "Pending" quest to "Accepted" or "Rejected" as you hear back.</li>
+                </ul>
+            </div>
+
             <div class="tracker-form">
                 <div>
-                    <label>Company Name</label>
-                    <input type="text" id="company" placeholder="">
+                    <label style="display:block; margin-bottom: 5px; font-weight: bold;">Company Name</label>
+                    <input type="text" id="company" placeholder="e.g. Deloitte">
                 </div>
                 <div>
-                    <label>Date Applied</label>
+                    <label style="display:block; margin-bottom: 5px; font-weight: bold;">Date Applied</label>
                     <input type="date" id="date">
                 </div>
             </div>
